@@ -1,3 +1,34 @@
+.bottom-page {
+   display: flex;
+   flex-direction: column;
+}
+
 //====================================================================================================
+
+.footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: rem(15);
+   @include adaptiveValue("padding-top", 88, 20);
+   @include adaptiveValue("padding-bottom", 88, 20);
+   &_copy {
+      color: $greycolor;
+      font-size: rem(14);
+      line-height: math.div(17, 14);
+   }
+
+   &__social {
+      .social__link {
+         color: $greycolor;
+         @media (any-hover: hover){
+            &:hover{
+               color: $purpleColor;
+            }
+         }
+      }
+   }
+}
 
 //====================================================================================================
