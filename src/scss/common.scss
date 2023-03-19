@@ -1,0 +1,117 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.page {
+
+   &__main {}
+}
+
+.page {
+
+   &__services {}
+}
+
+.page {
+
+   &__portfolio {}
+}
+
+.page {
+
+   &__career {}
+}
+
+.page {
+
+   &__blog {}
+}
+
+.page {
+
+   &__testimonials {}
+}
+
+.page {
+
+   &__skills {}
+}
+
+.page {
+
+   &__contacts {}
+}
+
+.title {
+
+   &__label {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: rem(12);
+      line-height: 24px;
+      letter-spacing: em(7.5, 12);
+      color: $greycolor;
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+      &::before{
+         content:'';
+         width: rem(16);
+         height: rem(2);
+         background-color: #D9D9D9;
+      }
+      &:not(:last-child) {
+         margin-bottom: em(9, 12);
+      }
+   }
+}
+
+.tilte {
+
+   &__value {
+      font-family: "Plus Jakarta Sans";
+      font-weight: 700;
+      @include adaptiveValue("font-size", 36, 28);
+      line-height: 1.25;
+      span{
+         color: $purpleColor;
+      }
+      &_big {
+         line-height: math.div(55, 44);
+         @include adaptiveValue("font-size", 44, 36);
+      }
+   }
+}
+
+.text {
+   line-height: math.div(32, 16);
+   p {
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
+   }
+}
+
+.category-link {
+   display: inline-block;
+   border: 1px solid #f1f1f1;
+   border-radius: rem(4);
+   color: $greycolor;
+   font-size: rem(12);
+   padding: rem(4) rem(8);
+   line-height: math.div(15, 12);
+   @media (any-hover: hover){
+      &:hover{
+         color: #fff;
+         background-color: $purpleColor;
+         border: rem(1) solid $purpleColor;
+      }
+   }
+}
+
+.date {
+   padding: rem(4) rem(8);
+   background: #FBFBFB;
+   border-radius: rem(4);
+   color: $greycolor;
+   font-size: rem(12);
+   line-height: math.div(15, 12);
+}
